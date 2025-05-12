@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Productos iniciales con nuevas imágenes deportivas
     const products = [
         {
             id: 1,
@@ -28,7 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 79900,
             discount: 64900,
             image: "https://nikeco.vtexassets.com/arquivos/ids/659384/HF7324_629_A_PREM.jpg?v=638568224685230000"
+        },
+        {
+            id: 5,
+            name: "Playera Sportswear",
+            price: 79900,
+            discount: 64900,
+            image: "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/jnighv6j24navz8l7xa5/M+NSW+TEE+ICON+FUTURA.png"
+        },
+        {
+            id: 6,
+            name: "Brasier Deportivo Sprinter",
+            price: 59900,
+            discount: 34900,
+            image: "https://resize.sprintercdn.com/b/1440x2160/products/0396077/nike-indy-flower_0396077_00_5_505985981.jpg?w=1440&q=75"
         }
+        
     ];
 
     let cart = [];
