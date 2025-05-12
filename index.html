@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Sport - Ropa Deportiva Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">AURA<span>SPORT</span></div>
+            <div class="cart-icon" id="cart-icon">
+                🛒 <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">COLECCIÓN PERFORMANCE</h1>
+        <p class="subtitle">Diseñado para atletas, creado para rendir</p>
+        
+        <div class="products-grid" id="products-grid">
+            <!-- Los productos se agregarán dinámicamente con JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal del Carrito -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>TU CARRITO</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Los items del carrito se agregarán aquí -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total">$0</span> COP</p>
+                <button class="checkout-btn">FINALIZAR COMPRA</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>Manuel Vargas / Jean Álvarez / Andrés Buelvas / Isaac Martinez</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
