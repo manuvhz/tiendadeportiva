@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
             discount: 34900,
             image: "https://resize.sprintercdn.com/b/1440x2160/products/0396077/nike-indy-flower_0396077_00_5_505985981.jpg?w=1440&q=75"
         }
-        
     ];
 
     let cart = [];
@@ -61,7 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
         products.forEach(product => {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
+            
+            // Calcula el porcentaje de descuento
+            const discountPercentage = product.discount 
+                ? Math.round(100 - (product.discount / product.price * 100)) 
+                : 0;
+            
             productCard.innerHTML = `
+                ${product.discount ? 
+                    `<div class="discount-badge">
+                        -${discountPercentage}%
+                    </div>` 
+                    : ''}
                 <img src="${product.image}" alt="${product.name}" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">${product.name}</h3>
@@ -181,6 +191,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Animación CSS para el icono del carrito
     const style = document.createElement('style');
     style.textContent = `
+        .product-card {
+            position: relative;
+            overflow: visible;
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 50px;
+            height: 50px;
+            background-color: #e63946;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border: 2px solid white;
+            font-family: 'Barlow Condensed', sans-serif;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
         .animate {
             animation: bounce 0.5s;
         }
